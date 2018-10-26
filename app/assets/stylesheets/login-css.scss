@@ -1,0 +1,43 @@
+
+
+body{
+  font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    line-height: 1.42857143;
+    color: seagreen;
+    background-color: black;
+}
+
+form {
+   border: 3px solid #f1f1f1;
+   border-radius: 17px;
+}
+input[type=text], input[type=password], input[type=email] {
+ width: 75%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ display: inline-block;
+ border: 1px solid #f1f1f1;
+ box-sizing: border-box;
+ border-radius: 10px;
+}
+
+.login {
+ background-color: #4CAF50;
+ color: black;
+ padding: 14px 20px;
+ margin: 8px 0;
+ border-radius: 10px;
+ cursor: pointer;
+ width: 75%;
+}
+
+.box-login {
+ margin-top: 1%;
+ text-align: center;
+ top: 50%;
+}
+#text-label{
+ font-size: 1.35em;
+ text-align: left;
+}

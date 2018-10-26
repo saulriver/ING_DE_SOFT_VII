@@ -8,16 +8,19 @@ body {
 }
 #wrapper {
   width: 100%;
+  left: auto;
+  top: auto;
+  position:static;
 }
 #page-wrapper {
   padding: 0 15px;
   min-height: 568px;
-  background-color: honeydew;
+  background-image: url('6.jpg');
   border-radius: 10px;
 }
 @media (min-width: 768px) {
   #page-wrapper {
-    position: inherit;
+    position:relative;
     margin: 0 0 0 250px;
     padding: 0 30px;
     border-left: 1px solid darkslategray;
@@ -31,8 +34,8 @@ body {
 }
 .navbar-top-links li {
   display: inline-block;
-  background-color: darkslategray;
-  border-radius: 8px;
+  background-color: ghostwhite;
+  border-radius: 13px;
 }
 .navbar-top-links li:last-child {
   margin-right: 15px;
@@ -57,11 +60,11 @@ background-color: ghostwhite;
 .navbar-top-links .dropdown-menu li a {
   padding: 3px 20px;
   min-height: 0;
-  background-color: honeydew;
+  background-color: ghostwhite;
 }
 .navbar-top-links .dropdown-menu li a div {
   white-space: normal;
-  background-color: honeydew;
+  background-color: ghostwhite;
 }
 .navbar-top-links .dropdown-messages,
 .navbar-top-links .dropdown-tasks,
@@ -81,13 +84,13 @@ background-color: ghostwhite;
 }
 .navbar-top-links .dropdown-alerts {
   margin-left: -123px;
-  background-color: ghostwhite;
+  background-color: darkslategray;
 
 }
 .navbar-top-links .dropdown-user {
   right: 0;
   left: auto;
-  background-color: ghostwhite;
+  background-color: honeydew;
   border-radius: 5px;
 }
 .sidebar .sidebar-nav.navbar-collapse {
@@ -97,17 +100,17 @@ background-color: ghostwhite;
   background-color: darkslategray;
 }
 .sidebar .sidebar-search {
-  padding: 15px;
+  padding: 5px;
   border-radius: 5px;
   background-color: darkslategray;
 }
 .sidebar ul li {
-  border-bottom: 1px solid darkslategray;
+  border-bottom: 5px solid darkslategray;
   border-radius: 5px;
 }
 .sidebar ul li a.active {
-  background-color: ghostwhite;
-  border-radius: 5px;
+  background-color: darkslategray;
+  border-radius: 7px;
 }
 .sidebar .arrow {
   float: right;
@@ -147,8 +150,8 @@ background-color: ghostwhite;
   }
 }
 .btn-outline {
-  color: inherit;
-  background-color: transparent;
+  color: green;
+  background-color: white;
   transition: all .5s;
 }
 .btn-primary.btn-outline {
@@ -171,7 +174,7 @@ background-color: ghostwhite;
 .btn-info.btn-outline:hover,
 .btn-warning.btn-outline:hover,
 .btn-danger.btn-outline:hover {
-  color: darkslategray;
+
 }
 .chat {
   margin: 0;
@@ -181,7 +184,7 @@ background-color: ghostwhite;
 .chat li {
   margin-bottom: 10px;
   padding-bottom: 5px;
-  border-bottom: 1px dotted #999999;
+  border-bottom: 1px dotted honeydew;
 }
 .chat li.left .chat-body {
   margin-left: 60px;
@@ -251,6 +254,7 @@ table.dataTable thead .sorting:after {
   border-radius: 25px;
   font-size: 18px;
   line-height: 1.33;
+  text-align: center;
 }
 .btn-circle.btn-xl {
   width: 70px;

@@ -1,4 +1,18 @@
 source 'https://rubygems.org'
+
+# gemas nuevas
+
+gem 'bootstrap'
+gem 'simple_form'
+gem 'jquery-rails'
+gem 'devise'
+gem 'bootstrap_sb_admin_base_v2'
+gem "font-awesome-rails"
+
+# gemas nuevas
+
+
+
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
@@ -61,8 +75,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'bootstrap'
-gem 'simple_form'
-gem 'jquery-rails'
-gem 'devise'
-gem 'bootstrap_sb_admin_base_v2'
