@@ -1,11 +1,11 @@
 <h1 class="text-center">EDITAR PROGRAMA</h1>
 
-<div class="modal-content text-center">
+<div class="content text-center">
 
   <%= simple_form_for @programa do |f|%>
 
   <div class="formulario">
-    <div id="color_letra" class="col-lg-6 col-md-3 col-sm-3">
+    <div>
     </br>
       <div  class="form-group">
           <%= f.input :codigo, placeholder:"Codigo Programa"%>
@@ -27,7 +27,7 @@
           <%= f.submit 'Guardar', class: "btn btn-success active",
           method: :edit, data: {confirm:'Actualizar Programa'}%>
           <%= link_to 'Regresar', programas_path,
-          class: "btn btn-ttc active"%>
+          class: "btn btn-info active"%>
         </div>
 
       </br>

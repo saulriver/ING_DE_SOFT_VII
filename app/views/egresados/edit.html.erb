@@ -1,11 +1,11 @@
 <h1 class="text-center">EDITAR EGRESADO</h1>
 
-<div class="modal-content text-center">
+<div class="content text-center">
 
   <%= simple_form_for @egresado do |f|%>
 
   <div class="formulario">
-    <div id="color_letra" class="col-lg-6 col-md-3 col-sm-3">
+    <div>
     </br>
       <div  class="form-group">
           <%= f.input :nombre, placeholder:"Digite Nombre"%>
@@ -52,7 +52,7 @@
           <%= f.submit 'Guardar', class: "btn btn-success active",
           method: :edit, data: {confirm:'Actualizar Egresado'}%>
           <%= link_to 'Regresar', egresados_path,
-          class: "btn btn-ttc active"%>
+          class: "btn btn-info active"%>
         </div>
 
       </br>
