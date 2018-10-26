@@ -1,0 +1,55 @@
+<h1 class="text-center">MODIFICAR EGRESADO</h1>
+</br>
+<div class="modal-content text-center">
+<div class="table-responsive">
+  <table class="table">
+
+    <thead>
+      <div class="row">
+        <tr class="warning">
+          <th class="text-center" colspan="2">Editar Egresado</th>
+          <th class="text-center">Nombre</th>
+          <th class="text-center">Apellidos</th>
+          <th class="text-center">Ingreso</th>
+          <th class="text-center">Egreso</th>
+          <th class="text-center">Contingente</th>
+          <th class="text-center">Facultad</th>
+          <th class="text-center">Programa</th>
+          <th class="text-center">Telefono</th>
+          <th class="text-center">Correo</th>
+          <th class="text-center">Direccion</th>
+        </tr>
+      </div>
+    </thead>
+
+    <tbody>
+      <div class="row">
+      <tr class="text-center">
+        <td colspan="2" class="info"><%= @egresado.id%></td>
+        <td><%= @egresado.nombre%></td>
+        <td><%= @egresado.apellidos%></td>
+        <td><%= @egresado.ingreso%></td>
+        <td><%= @egresado.egreso%></td>
+        <td><%= @egresado.contingente%></td>
+        <td><%= @egresado.facultad.nombre%></td>
+        <td><%= @egresado.programa.nombre%></td>
+        <td><%= @egresado.telefono%></td>
+        <td><%= @egresado.correo%></td>
+        <td><%= @egresado.direccion%></td>
+        </tr>
+      </div>
+    </tbody>
+
+  </table>
+</div>
+
+</br>
+<div class="actions">
+<%= link_to "Editar", edit_egresado_path(@egresado[:id]), class: "btn btn-ttc active"%>
+<%= link_to "Nuevo Registro", new_egresado_path, class: "btn btn-ttc active"%>
+<%= link_to "Regresar", egresados_path, class: "btn btn-ttc active" %>
+<%= link_to "Eliminar", egresado_path(@egresado), method: :delete,
+data: { confirm: 'Eliminar Egresado ?' }, class: "btn btn-danger active"%>
+</div>
+</br>
+</div>

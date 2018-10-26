@@ -1,0 +1,39 @@
+<h1 class="text-center">REGISTRO DE FACULTADES</h1>
+
+</br>
+<div class="modal-content text-center">
+<div class="table-responsive">
+<table class="table">
+
+<thead>
+  <div class="row">
+    <tr class="success">
+        <th class="text-center" colspan="2">Editar Facultad</th>
+        <th class="text-center">Facultad</th>
+        <th class="text-center">Decano</th>
+    </tr>
+  </div>
+</thead>
+
+<% @facultades.each do |facultad|%>
+
+<tbody>
+  <div class="row">
+    <tr class="text-center">
+    <td colspan="2" class="warning">
+    <%= link_to facultad.id, facultad_path(facultad), class:"btn btn-warning active"%></td>
+    <td><%= facultad.nombre%></td>
+    <td><%= facultad.decano%></td>
+    </tr>
+  </div>
+</tbody>
+
+    <%end%>
+
+  </table>
+</div>
+
+</br>
+</br>
+</br>
+</div>
