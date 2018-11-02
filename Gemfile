@@ -1,11 +1,14 @@
 source 'https://rubygems.org'
 
 # gemas nuevas
+
+
+gem "loofah", ">= 2.2.3"
+gem 'railties', '~> 5.2', '>= 5.2.1'
+gem 'devise', '>= 4.5'
 gem 'nokogiri'
-gem 'bootstrap'
 gem 'simple_form'
 gem 'jquery-rails'
-gem 'devise'
 gem 'bootstrap_sb_admin_base_v2'
 gem "font-awesome-rails"
 

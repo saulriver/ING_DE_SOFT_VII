@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
+  devise_for :users
 resources :welcome, only: [:index]
 
-  devise_for :users
   resources :egresados
   resources :facultades
   resources :programas
