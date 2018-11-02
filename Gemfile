@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # gemas nuevas
-
+gem 'nokogiri'
 gem 'bootstrap'
 gem 'simple_form'
 gem 'jquery-rails'
