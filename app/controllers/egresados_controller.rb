@@ -1,6 +1,8 @@
 class EgresadosController < ApplicationController
-#  protect_from_forgery with: :exception
-#  before_action :authenticate_user!
+#
+protect_from_forgery with: :exception
+#
+before_action :authenticate_user!
   def index
     @egresados = Egresado.all
   end
