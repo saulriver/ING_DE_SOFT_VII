@@ -1,4 +1,6 @@
 class FacultadesController < ApplicationController
+  protect_from_forgery with: :exception
+  before_action :authenticate_user!
   def index
     @facultades = Facultad.all
   end
@@ -11,7 +13,7 @@ class FacultadesController < ApplicationController
     @facultad = Facultad.new(facultad_params)
 
     if @facultad.save
-      
+
       redirect_to  new_facultad_path(@facultad), notice: 'Registro Exitoso'
 
     else

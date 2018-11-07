@@ -1,4 +1,6 @@
 class ProgramasController < ApplicationController
+  protect_from_forgery with: :exception
+  before_action :authenticate_user!
   def index
     @programas = Programa.all
   end
@@ -11,7 +13,7 @@ class ProgramasController < ApplicationController
     @programa = Programa.new(programa_params)
 
     if @programa.save
-      
+
       redirect_to new_programa_path(@programa), notice: 'Registro Exitoso'
 
     else
