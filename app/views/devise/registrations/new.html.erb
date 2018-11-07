@@ -5,11 +5,10 @@
                     <div class="panel-heading">
                       <span><center><i class="fa fa-users fa-5x"></i></center></span>
                       </br>
-                        <h1 class="page"><center>Registrate</center></h1>
+                        <h1 class="page"><center>Registrarse</center></h1>
                     </div>
-                    <div class="panel-body">
-                        <form role="form">
-                            <fieldset>
+<div class="panel-body">
+  <fieldset>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
@@ -34,7 +33,6 @@
 </br>
 <%= render "devise/shared/links" %>
 </fieldset>
-</form>
 </div>
 </div>
 </div>

@@ -7,9 +7,8 @@
                       </br>
                         <h1 class="page"><center>Inicia Sesión</center></h1>
                     </div>
-                    <div class="panel-body">
-                        <form role="form">
-                            <fieldset>
+<div class="panel-body">
+  <fieldset>
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
     <%= f.input :email,
@@ -29,7 +28,6 @@
 </br>
 <%= render "devise/shared/links" %>
 </fieldset>
-</form>
 </div>
 </div>
 </div>
