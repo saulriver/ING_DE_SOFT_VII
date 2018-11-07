@@ -1,6 +1,14 @@
-<h1 class="text-center">REGISTRAR EGRESADO</h1>
-
-<div class="content text-center">
+<div class="container">
+<div class="row">
+<div class="col-lg-10">
+<div class="col-lg-10">
+<h1 class="page">REGISTRAR EGRESADO</h1>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+</br>
+</br>
+<div class="panel-body">
 <%= simple_form_for @egresado do |f|%>
 
 
@@ -55,13 +63,14 @@
 
 
 <div class="actions">
-  <%= f.submit 'Guardar', method: :index, data: { confirm: 'Guardar Egresado' },
-  class:"btn btn-success active"%>
+  <center><%= f.submit 'Guardar', method: :index, data: { confirm: 'Guardar Egresado' },
+  class:"btn btn-primary active"%></center>
 </div>
-</br>
-</br>
-</br>
-</div>
-
 </div>
 <%end%>
+</div>
+ </div>
+  </div>
+  </div>
+</div>
+</div>
