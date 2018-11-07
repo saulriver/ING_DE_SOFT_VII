@@ -1,6 +1,14 @@
-<h1 class="text-center">REGISTRAR FACULTAD</h1>
-
-<div class="content text-center">
+<div class="container">
+<div class="row">
+<div class="col-lg-11">
+<div class="col-lg-12">
+<h1 class="page">REGISTRAR FACULTAD</h1>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+</br>
+</br>
+<div class="panel-body">
 <%= simple_form_for @facultad do |f|%>
 
 
@@ -21,12 +29,14 @@
   <center>
   <%= f.submit 'Guardar', method: :new,
   data: { confirm: 'Guardar Facultad' },
-   class:"btn btn-success active"%>
+   class:"btn btn-primary active"%>
 </center>
 </div>
-
 </div>
-</div>
-
 <%end%>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
