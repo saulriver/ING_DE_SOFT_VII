@@ -1,10 +1,12 @@
+<br>
+<br>
 <div id="wrapper">
         <div class="row">
             <div class="col-md-6 col-md-offset-3 box-login">
                 <div class="modal-content">
                     <div class="panel-heading">
-                      <span><center><i class="fa fa-users fa-5x"></i></center></span>
-                      </br>
+                      <span><center><i class="fa fa-users fa-5x text-danger"></i></center></span>
+                      <br>
                         <h1 class="page"><center>¿Olvidaste tu contraseña?</center></h1>
                     </div>
 <div class="panel-body">
@@ -23,8 +25,14 @@
     <%= f.button :submit, "Enviarme restablecer las instrucciones de contraseña", class:"btn btn-success active" %>
   </div>
 <% end %>
-</br>
-<%= render "devise/shared/links" %>
+<br>
+<div class="form-actions">
+<%= link_to "Iniciar Sesión", new_user_session_path, class: "fa fa-key" %>
+  </div>
+
+  <div class="form-actions">
+  <%= link_to "Regístrate", new_user_registration_path, class: "fa fa-user fa-fw"%>
+  </div>
 </fieldset>
 </div>
 </div>

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Users::UnlocksController < Devise::UnlocksController
+  #layout false
   # GET /resource/unlock/new
   # def new
   #   super
@@ -12,9 +13,9 @@ class Users::UnlocksController < Devise::UnlocksController
   # end
 
   # GET /resource/unlock?unlock_token=abcdef
-  # def show
-  #   super
-  # end
+  #def show
+  #super
+    #end
 
   # protected
 

@@ -3,8 +3,8 @@
             <div class="col-md-6 col-md-offset-3 box-login">
                 <div class="modal-content">
                     <div class="panel-heading">
-                      <span><center><i class="fa fa-users fa-5x"></i></center></span>
-                      </br>
+                      <span><center><i class="fa fa-users fa-5x text-danger"></i></center></span>
+                      <br>
                         <h1 class="page"><center>Editar <%= resource_name.to_s.humanize %></center></h1>
                     </div>
 <div class="panel-body">
@@ -33,7 +33,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Actualizar", class:"btn btn-warning active" %>
+    <%= f.button :submit, "Actualizar", class:"btn btn-danger active" %>
   </div>
 <% end %>
 
@@ -41,7 +41,7 @@
 
 <p>Insatisfecho? <%= link_to "Cancelar mi cuenta", registration_path(resource_name), data: { confirm: "Estas seguro?" }, method: :delete %></p>
 
-<%= link_to "Atras", :back %>
+<%= link_to "Atras", :back, class:"fa fa-undo fa-fw" %>
 </fieldset>
 </div>
 </div>
