@@ -12,6 +12,7 @@ gem 'jquery-rails'
 gem 'bootstrap_sb_admin_base_v2'
 gem "font-awesome-rails"
 
+
 # gemas nuevas
 
 
