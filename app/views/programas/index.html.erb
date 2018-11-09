@@ -1,10 +1,12 @@
 <h1 class="text-center">REGISTRO DE PROGRAMAS</h1>
 <br>
 <br>
+<div class="input-group custom-search-form">
 <%=form_tag (programas_path), method: :get do %>
 <%=text_field_tag(:search, params[:search], placeholder: "Ingresa programa")%>
 <%= submit_tag ("Buscar")%>
 <%end%>
+</div>
 <br>
 <div class="modal-content text-center">
 <div class="table-responsive">
@@ -36,12 +38,27 @@
     </tr>
   </div>
 </tbody>
-
     <%end%>
-
   </table>
-</div>
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="dataTables_info" id="dataTables-example_info" role="status" aria-live="polite">Mostrando de 1 a 10</div>
+    </div>
+    <div class="col-sm-6">
+      <div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate">
+        <ul class="pagination">
+          <li class="paginate_button previous disabled" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_previous">
+            <a href="#">Previous</a></li>
+            <li class="paginate_button" aria-controls="dataTables-example" tabindex="0"><a href="#" class="btn btn-warning active">1</a></li>
+            <li class="paginate_button" aria-controls="dataTables-example" tabindex="0"><a href="#">2</a></li>
+            <li class="paginate_button" aria-controls="dataTables-example" tabindex="0"><a href="#">3</a></li>
+            <li class="paginate_button" aria-controls="dataTables-example" tabindex="0"><a href="#">4</a></li>
+            <li class="paginate_button next" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_next"><a href="#" class="btn btn-warning active">Next</a></li>
+          </ul>
+        </div>
+      </div>
 
+</div>
 </br>
 </br>
 </br>
