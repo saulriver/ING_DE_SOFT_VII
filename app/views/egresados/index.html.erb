@@ -2,8 +2,8 @@
 <br>
 <br>
 <%=form_tag (egresados_path), method: :get do %>
-<%=text_field_tag(:search, params[:search])%>
-<%= submit_tag ("Search")%>
+<%=text_field_tag(:search, params[:search], placeholder: "Ingresa nombre")%>
+<%= submit_tag ("Buscar")%>
 <%end%>
 </br>
 <div class="modal-content text-center">

@@ -5,7 +5,12 @@ class FacultadesController < ApplicationController
   before_action :authenticate_user!
   #layout false
   def index
+    if
+    @facultades = Facultad.where("nombre LIKE ?", "%#{params[:search]}%")
+      else
     @facultades = Facultad.all
+        end
+
   end
 
   def new
@@ -53,7 +58,7 @@ class FacultadesController < ApplicationController
   private
 
   def facultad_params
-    params.require(:facultad).permit(:nombre, :decano)
+    params.require(:facultad).permit(:nombre, :decano, :search)
   end
 
 end

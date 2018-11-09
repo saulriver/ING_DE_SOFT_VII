@@ -1,6 +1,11 @@
 <h1 class="text-center">REGISTRO DE PROGRAMAS</h1>
-
-</br>
+<br>
+<br>
+<%=form_tag (programas_path), method: :get do %>
+<%=text_field_tag(:search, params[:search], placeholder: "Ingresa programa")%>
+<%= submit_tag ("Buscar")%>
+<%end%>
+<br>
 <div class="modal-content text-center">
 <div class="table-responsive">
 <table class="table">
