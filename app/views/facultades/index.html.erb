@@ -1,10 +1,10 @@
-<h1 class="text-center">REGISTRO DE FACULTADES</h1>
+<h1 class="text-center" style="color:#337ab7;">REGISTRO DE FACULTADES</h1>
 <br>
 <br>
 <div class="input-group custom-search-form">
 <%=form_tag (facultades_path), method: :get do %>
 <%=text_field_tag(:search, params[:search], placeholder: "Nombre facultad")%>
-<%= submit_tag ("Buscar")%>
+<%= submit_tag ("Buscar"), style:"color:#337ab7;"%>
 <%end%>
 </div>
 <br>
@@ -15,9 +15,9 @@
 <thead>
   <div class="row">
     <tr class="success">
-        <th class="text-center" colspan="2">Editar Facultad</th>
-        <th class="text-center">Facultad</th>
-        <th class="text-center">Decano</th>
+        <th class="text-center" style="color:#337ab7;" colspan="2">Editar Facultad</th>
+        <th class="text-center" style="color:#337ab7;">Facultad</th>
+        <th class="text-center" style="color:#337ab7;">Decano</th>
     </tr>
   </div>
 </thead>

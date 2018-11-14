@@ -1,10 +1,10 @@
-<h1 class="text-center">REGISTRO DE EGRESADOS</h1>
+<h1 class="text-center" style="color:#337ab7;">REGISTRO DE EGRESADOS</h1>
 <br>
 <br>
 <div class="input-group custom-search-form">
 <%=form_tag (egresados_path), method: :get do %>
 <%=text_field_tag(:search, params[:search], placeholder: "Ingresa nombre")%>
-<%= submit_tag ("Buscar")%>
+<%= submit_tag ("Buscar"), style:"color:#337ab7;"%>
 <%end%>
 </div>
 </br>
@@ -15,17 +15,17 @@
 <thead>
   <div class="row">
     <tr class="success">
-      <th class="text-center" colspan="2">Editar Egresado</th>
-      <th class="text-center">Nombre</th>
-      <th class="text-center">Apellidos</th>
-      <th class="text-center">Ingreso</th>
-      <th class="text-center">Egreso</th>
-      <th class="text-center">Contingente</th>
-      <th class="text-center">Facultad</th>
-      <th class="text-center">Programa</th>
-      <th class="text-center">Telefono</th>
-      <th class="text-center">Correo</th>
-      <th class="text-center">Direccion</th>
+      <th class="text-center" style="color:#337ab7;" colspan="2">Editar Egresado</th>
+      <th class="text-center" style="color:#337ab7;">Nombre</th>
+      <th class="text-center" style="color:#337ab7;">Apellidos</th>
+      <th class="text-center" style="color:#337ab7;">Ingreso</th>
+      <th class="text-center" style="color:#337ab7;">Egreso</th>
+      <th class="text-center" style="color:#337ab7;">Contingente</th>
+      <th class="text-center" style="color:#337ab7;">Facultad</th>
+      <th class="text-center" style="color:#337ab7;">Programa</th>
+      <th class="text-center" style="color:#337ab7;">Telefono</th>
+      <th class="text-center" style="color:#337ab7;">Correo</th>
+      <th class="text-center" style="color:#337ab7;">Direccion</th>
     </tr>
   </div>
 </thead>

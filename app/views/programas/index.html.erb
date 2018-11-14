@@ -1,10 +1,10 @@
-<h1 class="text-center">REGISTRO DE PROGRAMAS</h1>
+<h1 class="text-center" style="color:#337ab7;">REGISTRO DE PROGRAMAS</h1>
 <br>
 <br>
 <div class="input-group custom-search-form">
 <%=form_tag (programas_path), method: :get do %>
 <%=text_field_tag(:search, params[:search], placeholder: "Ingresa programa")%>
-<%= submit_tag ("Buscar")%>
+<%= submit_tag ("Buscar"), style:"color:#337ab7;"%>
 <%end%>
 </div>
 <br>
@@ -15,11 +15,11 @@
 <thead>
   <div class="row">
     <tr class="success">
-      <th class="text-center" colspan="2">Editar Programa</th>
-      <th class="text-center">Reg. SNIES</th>
-      <th class="text-center">Programa</th>
-      <th class="text-center">Jefe De Programa</th>
-      <th class="text-center">Facultad</th>
+      <th class="text-center" style="color:#337ab7;" colspan="2">Editar Programa</th>
+      <th class="text-center" style="color:#337ab7;">Reg. SNIES</th>
+      <th class="text-center" style="color:#337ab7;">Programa</th>
+      <th class="text-center" style="color:#337ab7;">Jefe De Programa</th>
+      <th class="text-center" style="color:#337ab7;">Facultad</th>
     </tr>
   </div>
 </thead>

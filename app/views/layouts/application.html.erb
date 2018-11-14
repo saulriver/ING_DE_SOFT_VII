@@ -8,6 +8,10 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="icon" href="/assets/2.png">
+<style>
+    body {font-family: "Lato", sans-serif}
+</style>
+
   </head>
 
   <body>
@@ -27,10 +31,11 @@
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
+                <!--<li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
+                    <!--
                     <ul class="dropdown-menu dropdown-messages">
 
                         <li class="divider"></li>
@@ -42,8 +47,9 @@
                         </li>
                     </ul>
                     <!-- /.dropdown-messages -->
-                </li>
+                <!--</li>-->
                 <!-- /.dropdown -->
+                <!--
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
@@ -59,8 +65,9 @@
                         </li>
                     </ul>
                     <!-- /.dropdown-tasks -->
-                </li>
+                <!--</li>-->
                 <!-- /.dropdown -->
+                <!--
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
@@ -75,11 +82,12 @@
                         </li>
                     </ul>
                     <!-- /.dropdown-alerts -->
-                </li>
+              <!--  </li>-->
+
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-user fa-fw fa-2x"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                       <!--
@@ -95,6 +103,7 @@
                         <li>
                         <%= link_to 'Editar Perfil', edit_user_registration_path, class: "fa fa-gear fa-fw" %>
                         </li>
+
                         <li class="divider"></li>
                         <li>
                           <%= link_to "Cerrar Sesión", destroy_user_session_path, class: "fa fa-sign-out fa-fw", method: :delete %>
@@ -167,12 +176,9 @@
             <!-- /.navbar-static-side -->
         </nav>
 
-        <div id="page-wrapper">
-          <p id="notice"><%= notice %></p>
+        <div id="page-wrapper" style="background-color: 	#F5FFFA;">
+          <p style="color:#ff0000" id="notice"><%= notice %></p>
             <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header"></h1>
-                </div>
               <!--aqui va el yield-->
               <%=yield%>
             </div>
