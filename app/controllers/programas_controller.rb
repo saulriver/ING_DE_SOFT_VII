@@ -5,10 +5,10 @@ protect_from_forgery with: :exception
  before_action :authenticate_user!
  #layout false
   def index
-    if
+    if params[:search].present?
     @programas = Programa.where("nombre LIKE ?", "%#{params[:search]}%")
       else
-        @programas = Programa.all
+        @programas = Programa.all.page params[:page]
         end
 
   end
@@ -58,7 +58,7 @@ protect_from_forgery with: :exception
   private
 
   def programa_params
-    params.require(:programa).permit(:codigo, :nombre, :encargado, :facultad_id, :search)
+    params.require(:programa).permit(:codigo, :nombre, :encargado, :facultad_id, :search, :page)
   end
 
 end

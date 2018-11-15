@@ -7,10 +7,10 @@ before_action :authenticate_user!
 
   def index
   #no se si sera una buena practica esta forma de colocar el codigo de busqueda en el def index para la asignacion de formas de busqueda con el metodo LIKE de postgrade SQL.
-  if
+  if params[:search].present?
   @egresados = Egresado.where("nombre LIKE ?", "%#{params[:search]}%")
     else
-  @egresados = Egresado.all
+  @egresados = Egresado.all.page params[:page]
       end
 
 end
@@ -68,7 +68,7 @@ end
 
   def egresado_params
     params.require(:egresado).permit(:nombre, :apellidos, :ingreso, :egreso, :contingente, :facultad_id,
-    :programa_id, :telefono, :correo, :direccion, :search)
+    :programa_id, :telefono, :correo, :direccion, :search, :page)
     end
     #fin def egresado_params
 

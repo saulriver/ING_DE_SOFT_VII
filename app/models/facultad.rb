@@ -4,5 +4,5 @@ class Facultad < ApplicationRecord
 
   validates :nombre, :presence => true
   validates :decano, :presence => true
-  
+  paginates_per 3
 end
