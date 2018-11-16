@@ -1,62 +1,63 @@
-<h1 class="text-center">EDITAR EGRESADO</h1>
-
-<div class="content text-center">
-
+<h1 class="page-header" style="color:#337ab7;">EDITAR EGRESADO</h1>
+<div class="form-group" style="color:#337ab7;">
+  <div class="modal-content">
+    <div class="panel-default">
+      <div class="panel-heading" style="color:#337ab7;"><i class="fa fa-user-circle-o"> Editar Usuario</i>
+        </div>
+  <div class="panel-body">
   <%= simple_form_for @egresado do |f|%>
-
-  <div class="formulario">
-    <div>
-    <br/>
-      <div  class="form-group">
+  <div class="row">
+    <div class="col-xs-4">
           <%= f.input :nombre, placeholder:"Digite Nombre"%>
       </div>
 
-      <div  class="form-group">
+      <div class="col-xs-4">
           <%= f.input :apellidos, placeholder:"Digite Apellidos"%>
       </div>
 
-  <div class="form-group">
+      <div class="col-xs-4">
+          <%= f.input :correo, placeholder: "Digite correo"%>
+      </div>
+
+  <div class="col-xs-4">
       <%= f.input :ingreso%>
   </div>
 
-  <div class="form-group">
+  <div class="col-xs-4">
       <%= f.input :egreso%>
   </div>
 
-  <div  class="form-group">
-      <%= f.input :contingente, placeholder:"Digite Contingente "%>
-  </div>
-
-  <div  class="form-group">
+  <div class="col-xs-4">
       <%= f.association :facultad, label_method: :nombre%>
   </div>
 
-  <div  class="form-group">
+  <div class="col-xs-4">
       <%= f.association :programa, label_method: :nombre%>
   </div>
 
-  <div  class="form-group">
+  <div class="col-xs-4">
+      <%= f.input :contingente, placeholder:"Digite Contingente "%>
+  </div>
+
+  <div class="col-xs-4">
       <%= f.input :telefono, placeholder: "Digite Telefono"%>
   </div>
 
-  <div  class="form-group">
-      <%= f.input :correo, placeholder: "Digite correo"%>
-  </div>
-
-  <div  class="form-group">
+  <div class="col-xs-4">
       <%= f.input :direccion, placeholder: "Digite Direccion"%>
   </div>
 
 
-        <div class="actions">
+        <div class="col-xs-4">
           <%= f.submit 'Guardar', class: "btn btn-success active",
           method: :edit, data: {confirm:'Actualizar Egresado'}%>
           <%= link_to 'Regresar', egresados_path,
           class: "btn btn-info active"%>
         </div>
 
-      <br/>
-</div>
 </div>
 <%end%>
+</div>
+</div>
+</div>
 </div>

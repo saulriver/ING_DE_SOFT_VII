@@ -6,7 +6,7 @@ class FacultadesController < ApplicationController
   #layout false
   def index
     if params[:search].present?
-    @facultades = Facultad.where("nombre LIKE ?", "%#{params[:search]}%")
+    @facultades = Facultad.where("nombre LIKE ?", "%#{params[:search]}%").page params[:page]
       else
     @facultades = Facultad.all.page params[:page]#order(:decano).page params[:page]
         end
@@ -22,7 +22,7 @@ class FacultadesController < ApplicationController
 
     if @facultad.save
 
-      redirect_to  new_facultad_path(@facultad), notice: 'Registro Exitoso'
+      redirect_to  new_facultad_path(@facultad), notice: 'Registro Exitoso' 
 
     else
       render :new

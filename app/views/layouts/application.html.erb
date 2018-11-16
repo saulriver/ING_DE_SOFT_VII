@@ -101,12 +101,16 @@
                         </li>
                         -->
                         <li>
-                        <%= link_to 'Editar Perfil', edit_user_registration_path, class: "fa fa-gear fa-fw" %>
+                        <%= link_to 'Editar Perfil', edit_user_registration_path, style:"color:#337ab7;", class: "fa fa-gear fa-fw" %>
                         </li>
-
-                        <li class="divider"></li>
+                            <li class="divider"></li>
                         <li>
-                          <%= link_to "Cerrar Sesión", destroy_user_session_path, class: "fa fa-sign-out fa-fw", method: :delete %>
+                          <%= link_to "Manual de Usuario", "/pdf_pagina.pdf", :target => '_blank', style:"color:#337ab7;", class:"fa fa-file-pdf-o fa-fw"%>
+                          </li>
+
+                            <li class="divider"></li>
+                        <li>
+                          <%= link_to "Cerrar Sesión", destroy_user_session_path, style:"color:#337ab7;", class: "fa fa-sign-out fa-fw", method: :delete %>
                         </li>
 
                         <li>

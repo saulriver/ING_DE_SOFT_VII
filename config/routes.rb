@@ -5,6 +5,7 @@ root 'welcome#index'
   resources :egresados
   resources :facultades
   resources :programas
+  resources :reportes
   devise_for :users, controllers: { sessions: "users/sessions" } #, path: 'auth', path_names:
 #  { sign_in: 'login', sign_out: 'logout', password: 'secret',
 #    confirmation: 'verification',

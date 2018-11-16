@@ -6,9 +6,9 @@ protect_from_forgery with: :exception
  #layout false
   def index
     if params[:search].present?
-    @programas = Programa.where("nombre LIKE ?", "%#{params[:search]}%")
+    @programas = Programa.where("nombre LIKE ?", "%#{params[:search]}%").page params[:page]
       else
-        @programas = Programa.all.page params[:page]
+        @programas = Programa.all.page params[:page]#.order(:decano).page params[:page]
         end
 
   end

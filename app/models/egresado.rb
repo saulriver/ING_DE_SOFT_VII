@@ -7,5 +7,5 @@ validates :apellidos, :presence => true
 validates :contingente, :presence => true
 validates :correo, :presence => true
 
-paginates_per 3
+paginates_per 100
 end

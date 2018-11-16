@@ -1,13 +1,16 @@
 <h1 class="text-center" style="color:#337ab7;">REGISTRO DE EGRESADOS</h1>
 <br>
 <br>
-<div class="input-group custom-search-form">
+<div class="custom-search-form">
 <%=form_tag (egresados_path), method: :get do %>
 <%=text_field_tag(:search, params[:search], placeholder: "Ingresa nombre")%>
 <%= submit_tag ("Buscar"), style:"color:#337ab7;"%>
 <%end%>
 </div>
-</br>
+
+<div class="form-group text-right">
+<%= link_to '', egresados_path(format: :pdf), method: :get, :target => '_blank', class:"fa fa-file-pdf-o fa-fw fa-2x",style:"color:tomato;"%>
+</div>
 <div class="modal-content text-center">
 <div class="table-responsive">
 <table class="table">
@@ -30,13 +33,12 @@
   </div>
 </thead>
 
-
 <% @egresados.each do |egresado|%>
 <tbody>
   <div class="row">
     <tr class="text-center">
     <td colspan="2" class="warning">
-    <%= link_to egresado.id, egresado_path(egresado), class:"btn btn-warning active"%></td>
+    <%= link_to egresado.id, egresado_path(egresado),class:"btn btn-warning active"%></td>
     <td><%= egresado.nombre%></td>
     <td><%= egresado.apellidos%></td>
     <td><%= egresado.ingreso%></td>
@@ -47,14 +49,14 @@
     <td><%= egresado.telefono%></td>
     <td><%= egresado.correo%></td>
     <td><%= egresado.direccion%></td>
-
     </tr>
   </div>
 </tbody>
     <%end%>
   </table>
   <div><%= paginate @egresados %></div>
+
+</div>
 </div>
 <br/>
 <br/>
-</div>

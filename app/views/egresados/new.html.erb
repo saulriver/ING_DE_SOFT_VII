@@ -1,74 +1,62 @@
-<br>
-<br>
-<div class="modal-content">
-<div class="col-lg-12">
-<h1 class="page-header" style="color:#337ab7;">REGISTRAR EGRESADO</h1>
-</div>
-<br/>
-<br/>
-<div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-<div class="panel-body">
-<%= simple_form_for @egresado do |f|%>
-<div class="container"
-<div class="col-md-8 col-md-offset-2">
-<div class="card" style="color:#337ab7;">
-<div class="card-body d-flex justify-content-between align-items-center">
+<h1 class="page-header" style="color:#337ab7;">REGISTRO DE EGRESADOS</h1>
+<div class="form-group" style="color:#337ab7;">
+  <div class="modal-content">
+    <div class="panel-default">
+      <div class="panel-heading" style="color:#337ab7;"><i class="fa fa-user-circle-o"> Agregar Usuario</i>
+        </div>
+  <div class="panel-body">
+    <%= simple_form_for @egresado do |f|%>
+    <div class="row">
+      <div class="col-xs-4">
     <%= f.input :nombre,
      placeholder:"Digite Nombre"%>
-&nbsp
-&nbsp
-&nbsp
-&nbsp
+      </div>
+
+  <div class="col-xs-4">
     <%= f.input :apellidos,
     placeholder:"Digite Apellidos"%>
-&nbsp
+  </div>
+
+<div class="col-xs-4">
 <%= f.input :correo,
  placeholder:"Digite Correo"%>
+</div>
 
-  <p><br>
+<div class="col-xs-4">
   <%= f.input :ingreso%>
-  &nbsp
-  &nbsp
-  &nbsp
-  &nbsp
+  </div>
+
+<div class="col-xs-4">
   <%= f.input :egreso%>
-  </p>
+</div>
 
-<p><br>
+<div class="col-xs-4">
+<%= f.association  :facultad, label_method: :nombre%>
+<%= f.association :programa, label_method: :nombre%>
+</div>
+
+<div class="col-xs-4">
 <%= f.input :contingente, placeholder:"Digite Contingente"%>
-&nbsp
+</div>
 
+<div class="col-xs-4">
 <%= f.input :direccion,
  placeholder:"Digite Direccion"%>
-&nbsp
+ </div>
+
+<div class="col-xs-4">
  <%= f.input :telefono,
   placeholder:"Digite Telefono"%>
-</p>
-<p><br>
-  <%= f.association  :facultad, label_method: :nombre%>
-&nbsp
-&nbsp
-&nbsp
-&nbsp
-&nbsp
-&nbsp
-&nbsp
-&nbsp
-&nbsp
-&nbsp
-  <%= f.association :programa, label_method: :nombre%>
-&nbsp
-&nbsp
-&nbsp
-&nbsp
+</div>
+
+<div class="col-xs-4">
 <%= f.submit 'Guardar', method: :index, data: { confirm: 'Guardar Egresado' },
     class:"btn btn-primary active"%>
-</p>
 </div>
-</div>
-</div>
+
 </div>
 <%end%>
+</div>
 </div>
 </div>
 </div>

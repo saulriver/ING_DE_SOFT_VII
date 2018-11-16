@@ -9,11 +9,13 @@ gem 'devise', '>= 4.5'
 gem 'nokogiri'
 gem 'simple_form'
 gem 'jquery-rails'
+gem 'jquery-turbolinks'
 gem 'bootstrap_sb_admin_base_v2'
 gem "font-awesome-rails"
 gem 'kaminari'
 gem 'kaminari-bootstrap'
-
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 # gemas nuevas
 
 

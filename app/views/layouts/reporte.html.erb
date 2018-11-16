@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aplicacion Web</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= wicked_pdf_stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= wicked_pdf_javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <style>
+        body {font-family: "Lato", sans-serif;
+        background-color: #FFFAFA;
+     }
+     tr{
+       background-color: #DCDCDC;
+     }
+    </style>
+
+  </head>
+
+  <body>
+
+    <table>
+  <h1 class="text-center" style="color:#337ab7;">REGISTRO DE EGRESADOS</h1>
+    <thead>
+      <div class="row">
+        <tr class="success">
+          <th class="text-center" style="color:#337ab7;">Nombre</th>
+          <th class="text-center" style="color:#337ab7;">Apellidos</th>
+          <th class="text-center" style="color:#337ab7;">Ingreso</th>
+          <th class="text-center" style="color:#337ab7;">Egreso</th>
+          <th class="text-center" style="color:#337ab7;">Contingente</th>
+          <th class="text-center" style="color:#337ab7;">Facultad</th>
+          <th class="text-center" style="color:#337ab7;">Programa</th>
+          <th class="text-center" style="color:#337ab7;">Telefono</th>
+          <th class="text-center" style="color:#337ab7;">Correo</th>
+          <th class="text-center" style="color:#337ab7;">Direccion</th>
+        </tr>
+      </div>
+    </thead>
+    <tbody>
+      <% @egresados.each do |egresado|%>
+      <div class="row">
+        <tr class="text-center">
+        <td><%= egresado.nombre%></td>
+        <td><%= egresado.apellidos%></td>
+        <td><%= egresado.ingreso%></td>
+        <td><%= egresado.egreso%></td>
+        <td><%= egresado.contingente%></td>
+        <td><%= egresado.facultad.nombre%></td>
+        <td><%= egresado.programa.nombre%></td>
+        <td><%= egresado.telefono%></td>
+        <td><%= egresado.correo%></td>
+        <td><%= egresado.direccion%></td>
+
+        </tr>
+      </div>
+    </tbody>
+        <%end%>
+      </table>
+
+
+  </body>
+  </html>
